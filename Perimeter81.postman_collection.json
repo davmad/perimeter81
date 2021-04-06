@@ -1,0 +1,200 @@
+{
+	"variables": [],
+	"info": {
+		"name": "Perimeter81",
+		"_postman_id": "668d05cb-8a6c-3704-5d7a-f4f8ecaef0de",
+		"description": "Perimeter81 Home Task",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Create New User",
+			"request": {
+				"url": "http://localhost:3000/api/user",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"name\": \"shlomo\", \n\t\"email\": \"shlomo@gmail.com\",\n\t\"address\": \"Hamelech Shlomo 22, Tel-Aviv\",\n\t\"pass\": \"123456\"\n}"
+				},
+				"description": "Create New User"
+			},
+			"response": []
+		},
+		{
+			"name": "Update Existing User",
+			"request": {
+				"url": "http://localhost:3000/api/user/606c078493213c674eeac490",
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"name\": \"Daud\"\n}"
+				},
+				"description": "Update Existing User"
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Existing User",
+			"request": {
+				"url": "http://localhost:3000/api/user/606c078493213c674eeac490",
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"description": "Delete Existing User"
+			},
+			"response": []
+		},
+		{
+			"name": "Login User",
+			"request": {
+				"url": "http://localhost:3000/api/user/login",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"email\": \"david@gmail.com\",\n\t\"pass\": \"123456\"\n}"
+				},
+				"description": "Login User"
+			},
+			"response": []
+		},
+		{
+			"name": "Logout User",
+			"request": {
+				"url": "http://localhost:3000/api/user/logout",
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "$2b$04$vwFQG.xnFvWHBFwTC0Y3juNfNFqx4vZnDPu0PPSE0WzUiOT1ByRIm",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"email\": \"david@gmail.com\",\n\t\"pass\": \"123456\"\n}"
+				},
+				"description": "Logout User"
+			},
+			"response": []
+		},
+		{
+			"name": "Get Menu",
+			"request": {
+				"url": "http://localhost:3000/api/menu",
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"email\": \"david@gmail.com\",\n\t\"pass\": \"123456\"\n}"
+				},
+				"description": "Get Menu"
+			},
+			"response": []
+		},
+		{
+			"name": "Update Cart",
+			"request": {
+				"url": "http://localhost:3000/api/cart/fill",
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					},
+					{
+						"key": "Authorization",
+						"value": "$2b$04$do./ynPP5EsSojeU6jZ9VOTsGQXG4Gymhvc7.Dyi72EDRgAVYmvhe",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "[\n\t{\"id\": 1, \"quantity\": 2},\n\t{\"id\": 2, \"quantity\": 1},\n\t{\"id\": 3, \"quantity\": 2}\n]"
+				},
+				"description": "Update Cart"
+			},
+			"response": []
+		},
+		{
+			"name": "Add Items to Cart",
+			"request": {
+				"url": "http://localhost:3000/api/cart/add",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					},
+					{
+						"key": "Authorization",
+						"value": "$2b$04$oejG7u7BIolNpqr0R4KLFemlMvSEmt5ISQqytNSuraSBOjwmjpOqS",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "[\n\t{\"id\": 1, \"quantity\": 2},\n\t{\"id\": 2, \"quantity\": 1},\n\t{\"id\": 3, \"quantity\": 2}\n]"
+				},
+				"description": "Add Items to Cart"
+			},
+			"response": []
+		},
+		{
+			"name": "Create & Checkout Order",
+			"request": {
+				"url": "http://localhost:3000/api/order/checkout",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					},
+					{
+						"key": "Authorization",
+						"value": "$2b$04$do./ynPP5EsSojeU6jZ9VOTsGQXG4Gymhvc7.Dyi72EDRgAVYmvhe",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"number\": \"4242424242424242\",\n    \"exp_month\": \"4\",\n    \"exp_year\": \"2022\",\n    \"cvc\": \"314\"\n}"
+				},
+				"description": "Create & Checkout Order"
+			},
+			"response": []
+		}
+	]
+}
