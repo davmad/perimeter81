@@ -34,6 +34,11 @@
 				"method": "PUT",
 				"header": [
 					{
+						"key": "Authorization",
+						"value": "$2b$04$vwFQG.xnFvWHBFwTC0Y3juNfNFqx4vZnDPu0PPSE0WzUiOT1ByRIm",
+						"description": ""
+					},
+					{
 						"key": "Content-Type",
 						"value": "application/json",
 						"description": ""

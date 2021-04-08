@@ -64,7 +64,7 @@ class MongoosDal {
     await this.connects();
     const newUser = new User(user);
     await newUser.save();
-    return { name: newUser.name, email: newUser.email, address: newUser.address };
+    return { uid: newUser._id, name: newUser.name, email: newUser.email, address: newUser.address };
   }
 
   public async updateUser(userID: any, user: IUser): Promise<IBasicUser | null> {
@@ -79,7 +79,7 @@ class MongoosDal {
       }
     });
     await updatedUser.save();
-    return { name: updatedUser.name, email: updatedUser.email, address: updatedUser.address };
+    return { uid: updatedUser._id, name: updatedUser.name, email: updatedUser.email, address: updatedUser.address };
   }
 
   public async deleteUser(userID: any): Promise<IBasicUser | null> {

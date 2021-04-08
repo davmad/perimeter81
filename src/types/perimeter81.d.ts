@@ -26,6 +26,7 @@ declare interface ICartItem {
 declare type ICart = ICartItem[];
 
 declare interface IBasicUser {
+  uid?: any;
   name: string;
   email: string;
   address: string;

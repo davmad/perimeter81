@@ -6,7 +6,7 @@ const apiUserRoutes = Router();
 
 apiUserRoutes.post("/", apiUserController.createUser);
 
-apiUserRoutes.put("/:user_id", apiUserController.updateUser);
+apiUserRoutes.put("/:user_id", checkLoginToken, apiUserController.updateUser);
 
 apiUserRoutes.delete("/:user_id", apiUserController.deleteUser);
 
